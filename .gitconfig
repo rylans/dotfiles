@@ -1,0 +1,8 @@
+[alias]
+	st = status
+	lg = log --oneline --abbrev-commit --all --graph --decorate --color
+	dh = diff --cached HEAD^
+	l = log --stat --abbrev-commit
+	lgg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	today = log --since=midnight --oneline
+	s = status -s -b
