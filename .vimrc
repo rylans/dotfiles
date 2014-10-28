@@ -1,4 +1,6 @@
 syntax enable
+colorscheme koehler
+
 set smartindent
 set nu
 
