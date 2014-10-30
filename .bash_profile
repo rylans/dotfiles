@@ -4,11 +4,13 @@
 export GH="$HOME/Documents/apidev/github"
 export DF="$GH/dotfiles"
 export DB="$HOME/Dropbox"
+export CP="$HOME/Copy"
 
 # directory traversal
 alias dotfiles='cd $DF'
 alias dropbox='cd $DB'
 alias github='cd $GH'
+alias copy='cd $CP'
 
 # git typos
 alias gti='git'
@@ -41,5 +43,8 @@ alias evim='vim ~/.vimrc; cp ~/.vimrc $DF'
 alias todo='vim $DB/todolist.txt'
 alias note='vim $DB/notes.txt'
 
-# dropbox backup shortcuts
-alias drop_gh='cp -r $GH $DB; chmod -R 777 $DB'
+# Backup Github to Dropbox
+alias box_gh='cp -r $GH $DB; chmod -R 777 $DB'
+
+# Backup Dropbox to Copy
+alias drop_copy='cp -r $DB $CP'
