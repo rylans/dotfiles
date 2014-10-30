@@ -31,3 +31,6 @@ alias evim='vim ~/.vimrc; cp ~/.vimrc $DF'
 
 # todo edit
 alias todo='vim $DB/todolist.txt'
+
+# dropbox backup shortcuts
+alias drop_gh='cp -r $GH $DB; chmod -R 777 $DB'
