@@ -1,3 +1,5 @@
+" ~/.vimrc
+
 syntax enable
 colorscheme koehler
 
@@ -24,7 +26,7 @@ set showcmd
 
 setlocal listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
-" Delete trailing whitespace for Python
+" Delete trailing whitespace
 func! DeleteTrailingWs()
   exe "normal mz"
   %s/\s\+$//ge
