@@ -3,6 +3,7 @@
 # directories
 export GH="$HOME/Documents/apidev/github"
 export DF="$GH/dotfiles"
+export DB="$HOME/Dropbox"
 
 # git typos
 alias gti='git'
@@ -27,3 +28,6 @@ alias la='ls -la'
 # quick edit and dotfile update
 alias ebash='vim ~/.bash_profile; source ~/.bash_profile; cp ~/.bash_profile $DF'
 alias evim='vim ~/.vimrc; cp ~/.vimrc $DF'
+
+# todo edit
+alias todo='vim $DB/todolist.txt'
