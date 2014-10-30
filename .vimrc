@@ -3,12 +3,24 @@ colorscheme koehler
 
 set smartindent
 set nu
+set stal=2
 
 set autoread
 set ignorecase
 set si
 set ai
 set smarttab
+
+set noswapfile
+set nobackup
+set nowb
+
+set wildmenu
+set nocompatible
+
+set cursorline
+set ruler
+set showcmd
 
 setlocal listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
