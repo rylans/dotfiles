@@ -1,7 +1,8 @@
 dotfiles
 ========
 
-vim and git configuration files
+My dotfiles for git, bash and vim.
 
 * .gitconfig
 * .vimrc
+* .bash_profile

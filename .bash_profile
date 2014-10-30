@@ -33,13 +33,13 @@ alias duh='du -s -h'
 alias dh='duh'
 alias d='duh'
 
-
 # quick edit and dotfile update
 alias ebash='vim ~/.bash_profile; source ~/.bash_profile; cp ~/.bash_profile $DF'
 alias evim='vim ~/.vimrc; cp ~/.vimrc $DF'
 
-# todo edit
+# Shortcuts for editing dropbox files
 alias todo='vim $DB/todolist.txt'
+alias note='vim $DB/notes.txt'
 
 # dropbox backup shortcuts
 alias drop_gh='cp -r $GH $DB; chmod -R 777 $DB'
