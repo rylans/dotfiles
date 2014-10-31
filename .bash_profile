@@ -48,3 +48,6 @@ alias box_gh='cp -r $GH $DB; chmod -R 777 $DB'
 
 # Backup Dropbox to Copy
 alias drop_copy='cp -r $DB $CP'
+
+# Bash prompt
+export PS1="\e[0;36m\u:\e[m\e[0;32m\w \e[m"
