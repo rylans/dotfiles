@@ -1,5 +1,7 @@
 # ~/.bash_profile
 
+export EDITOR='vim'
+
 # directories
 export GH="$HOME/Documents/apidev/github"
 export DF="$GH/dotfiles"
