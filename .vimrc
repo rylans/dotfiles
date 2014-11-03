@@ -1,7 +1,12 @@
 " ~/.vimrc
 
+call pathogen#infect()
+
 syntax enable
 colorscheme koehler
+
+set sw=2
+set sts=2
 
 set smartindent
 set nu
