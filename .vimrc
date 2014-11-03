@@ -7,8 +7,10 @@ set smartindent
 set nu
 set stal=2
 
-set autoread
 set ignorecase
+set incsearch
+
+set autoread
 set si
 set ai
 set smarttab
