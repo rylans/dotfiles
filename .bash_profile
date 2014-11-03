@@ -2,6 +2,10 @@
 
 export EDITOR='vim'
 
+# history
+export HISTCONTROL=ignoredups
+export HISTIGNORE="ls:ls *:cd:cd *:pwd"
+
 # directories
 export GH="$HOME/Documents/apidev/github"
 export DF="$GH/dotfiles"
@@ -51,5 +55,13 @@ alias box_gh='cp -r $GH $DB; chmod -R 777 $DB'
 # Backup Dropbox to Copy
 alias drop_copy='cp -r $DB $CP'
 
+# Put all backup operations in this alias
+alias backup='box_gh; drop_copy'
+
+function is_git_dirty {
+  git diff --quiet HEAD &>/dev/null
+  [[ $? == 1 ]] && echo "⚡ " || echo "👌 "
+}
+
 # Bash prompt
-export PS1="\e[0;36m\u:\e[m\e[0;32m\w \e[m"
+export PS1="\e[0;36m\u:\e[m\e[0;32m\w\e[m\$(is_git_dirty)"
