@@ -60,7 +60,14 @@ alias backup='box_gh; drop_copy'
 
 function is_git_dirty {
   git diff --quiet HEAD &>/dev/null
-  [[ $? == 1 ]] && echo "⚡ " || echo "👌 "
+  ESTATUS=$?
+  if [[ $ESTATUS == 1 ]]; then
+    echo "⚡ " 
+  elif [[ $ESTATUS == 129 ]]; then
+    echo " "
+  else
+    echo "👌 "
+  fi
 }
 
 # Bash prompt
