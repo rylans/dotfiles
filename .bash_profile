@@ -1,6 +1,7 @@
 # ~/.bash_profile
 
 export EDITOR='vim'
+export PAGER="less"
 
 # history
 export HISTCONTROL=ignoredups
