@@ -38,7 +38,9 @@ let mapleader=" "
 nmap <Leader><Leader> <c-w><c-w>
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
+nmap <leader>l :set list!<CR>
 nmap <Leader>s ddp
+nmap <Leader>v V}
 map q: :q
 
 " Delete trailing whitespace
