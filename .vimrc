@@ -1,6 +1,7 @@
 " ~/.vimrc
-
 call pathogen#infect()
+
+set nocompatible
 
 syntax enable
 colorscheme koehler
@@ -25,13 +26,20 @@ set nobackup
 set nowb
 
 set wildmenu
-set nocompatible
 
 set cursorline
 set ruler
 set showcmd
 
 setlocal listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
+" Keybindings
+let mapleader=" "
+nmap <Leader><Leader> <c-w><c-w>
+nmap <Leader>w :w<CR>
+nmap <Leader>q :q<CR>
+nmap <Leader>s ddp
+map q: :q
 
 " Delete trailing whitespace
 func! DeleteTrailingWs()
