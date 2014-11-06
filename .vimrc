@@ -33,17 +33,30 @@ set showcmd
 
 setlocal listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
+"""""""""""""""
 " Keybindings
+"""""""""""""""
 let mapleader=" "
 nnoremap <Leader><Leader> <c-w><c-w>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <leader>l :set list!<CR>
-nnoremap <Leader>s ddp
+nnoremap <Leader>z ddp
 nnoremap <Leader>v V}
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-map q: :q
+nnoremap q: :q<cr>
+
+inoremap jk <esc>
+inoremap kj <esc>
+inoremap <esc> <nop>
+
+nnoremap <leader>f <c-f>
+nnoremap <leader>b <c-b>
+
+" Surround word in double quotes
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+
 
 """""""""""""""
 " Abbreviations
@@ -104,6 +117,9 @@ iabbrev wth with
 iabbrev fro for
 iabbrev fr for
 
+iabbrev true True
+iabbrev false False
+
 " Delete trailing whitespace
 func! DeleteTrailingWs()
   exe "normal mz"
@@ -120,5 +136,12 @@ endfunc
 
 autocmd BufWrite *.py :call DeleteTrailingWs()
 autocmd BufReadPost * :call ReturnCursor()
+
+augroup ft_python
+  autocmd!
+  autocmd FileType python nnoremap <buffer> <leader>/ I#<esc>
+  autocmd FileType python :iabbrev <buffer> iff if:<left>
+  autocmd FileType python :iabbrev <buffer> deff def (self):<c-c>Bi<bs>
+augroup END
 
 filetype plugin indent on
