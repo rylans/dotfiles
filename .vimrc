@@ -35,13 +35,74 @@ setlocal listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 " Keybindings
 let mapleader=" "
-nmap <Leader><Leader> <c-w><c-w>
-nmap <Leader>w :w<CR>
-nmap <Leader>q :q<CR>
-nmap <leader>l :set list!<CR>
-nmap <Leader>s ddp
-nmap <Leader>v V}
+nnoremap <Leader><Leader> <c-w><c-w>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <leader>l :set list!<CR>
+nnoremap <Leader>s ddp
+nnoremap <Leader>v V}
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 map q: :q
+
+"""""""""""""""
+" Abbreviations
+"""""""""""""""
+
+" Python keyword abbreviations
+iabbrev clas class
+iabbrev clss class
+iabbrev calss class
+
+iabbrev dfe def
+iabbrev df def
+
+iabbrev impot import
+iabbrev impor import
+iabbrev iport import
+iabbrev imprt import
+
+iabbrev frm from
+iabbrev frmo from
+
+iabbrev raies raise
+iabbrev rais raise
+iabbrev rase raise
+
+iabbrev ni in
+iabbrev fi if
+iabbrev sa as
+
+iabbrev elfi elif
+iabbrev elf elif
+
+iabbrev eles else
+iabbrev els else
+iabbrev esle else
+
+iabbrev retur return
+iabbrev retun return
+iabbrev retunr return
+iabbrev retrun return
+iabbrev retrn return
+
+iabbrev supre super
+iabbrev supe super
+iabbrev supr super
+
+iabbrev tyr try
+iabbrev tr try
+iabbrev ty try
+
+iabbrev nt not
+iabbrev nto not
+
+iabbrev wit with
+iabbrev wiht with
+iabbrev wth with
+
+iabbrev fro for
+iabbrev fr for
 
 " Delete trailing whitespace
 func! DeleteTrailingWs()
