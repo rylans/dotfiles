@@ -1,4 +1,7 @@
-" ~/.vimrc
+﻿" ~/.vimrc
+scriptencoding utf-8
+set encoding=utf-8
+
 call pathogen#infect()
 
 set nocompatible
@@ -31,7 +34,7 @@ set cursorline
 set ruler
 set showcmd
 
-setlocal listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+setlocal listchars=eol:¶,tab:>-,trail:␦,extends:>,precedes:<
 
 """""""""""""""
 " Keybindings
