@@ -36,6 +36,14 @@ set showcmd
 
 setlocal listchars=eol:¶,tab:>-,trail:␦,extends:>,precedes:<
 
+"""""""""
+" Plugins
+"""""""""
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline_theme = 'powerlineish'
+let g:airline_detect_modified=1
+
 """""""""""""""
 " Keybindings
 """""""""""""""
@@ -48,6 +56,9 @@ nnoremap <Leader>z ddp
 nnoremap <Leader>v V}
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>t :tabn<CR>
+nnoremap <leader>T :tabp<CR>
 nnoremap q: :q<cr>
 
 inoremap jk <esc>
