@@ -14,7 +14,7 @@ set sts=2
 
 set smartindent
 set nu
-set stal=2
+set laststatus=2
 
 set ignorecase
 set incsearch
@@ -30,8 +30,6 @@ set nowb
 
 set wildmenu
 
-set cursorline
-set ruler
 set showcmd
 
 setlocal listchars=eol:¶,tab:>-,trail:␦,extends:>,precedes:<
@@ -65,11 +63,14 @@ inoremap jk <esc>
 inoremap kj <esc>
 inoremap <esc> <nop>
 
-nnoremap <leader>f <c-f>
-nnoremap <leader>b <c-b>
+nnoremap <leader>f <c-f>zz
+nnoremap <leader>b <c-b>zz
 
 " Surround word in double quotes
 nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+
+" cin( to change inside next pair of parens
+onoremap in( :<c-u>normal! f(vi(<cr>
 
 
 """""""""""""""
