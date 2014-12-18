@@ -61,7 +61,6 @@ nnoremap q: :q<cr>
 
 inoremap jk <esc>
 inoremap kj <esc>
-inoremap <esc> <nop>
 
 nnoremap <leader>f <c-f>zz
 nnoremap <leader>b <c-b>zz
