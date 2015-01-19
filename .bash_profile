@@ -12,12 +12,14 @@ export GH="$HOME/Documents/apidev/github"
 export DF="$GH/dotfiles"
 export DB="$HOME/Dropbox"
 export CP="$HOME/Copy"
+export JS="$HOME/.js"
 
 # directory traversal
 alias dotfiles='cd $DF'
 alias dropbox='cd $DB'
 alias github='cd $GH'
 alias copy='cd $CP'
+alias js='cd $JS'
 
 # git typos
 alias gti='git'
@@ -41,6 +43,7 @@ alias la='ls -la'
 alias duh='du -s -h'
 alias dh='duh'
 alias d='duh'
+alias t='top -o cpu'
 
 # quick edit and dotfile update
 alias ebash='vim ~/.bash_profile; source ~/.bash_profile; cp ~/.bash_profile $DF'
@@ -53,11 +56,13 @@ alias note='vim $DB/notes.txt'
 # Backup Github to Dropbox
 alias box_gh='cp -r $GH $DB; chmod -R 777 $DB'
 
+alias box_js='cp -r $JS $DB'
+
 # Backup Dropbox to Copy
 alias drop_copy='cp -r $DB $CP'
 
 # Put all backup operations in this alias
-alias backup='box_gh; drop_copy'
+alias backup='box_js; box_gh; drop_copy'
 
 function is_git_dirty {
   git diff --quiet HEAD &>/dev/null
