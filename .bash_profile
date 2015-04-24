@@ -64,6 +64,8 @@ alias drop_copy='cp -r $DB $CP'
 # Put all backup operations in this alias
 alias backup='box_js; box_gh; drop_copy'
 
+alias ghpage='git checkout gh-pages; git rebase master; git pull; git push; git checkout master'
+
 function is_git_dirty {
   git diff --quiet HEAD &>/dev/null
   ESTATUS=$?
@@ -78,3 +80,5 @@ function is_git_dirty {
 
 # Bash prompt
 export PS1="\e[0;36m\u:\e[m\e[0;32m\w\e[m\$(is_git_dirty)"
+
+defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool FALSE
