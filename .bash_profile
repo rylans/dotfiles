@@ -64,7 +64,11 @@ alias drop_copy='cp -r $DB $CP'
 # Put all backup operations in this alias
 alias backup='box_js; box_gh; drop_copy'
 
+# Publish to github pages (from master)
 alias ghpage='git checkout gh-pages; git rebase master; git pull; git push; git checkout master'
+
+# Start interactive rebase of last two commits
+alias squash='git rebase -i HEAD~2'
 
 function is_git_dirty {
   git diff --quiet HEAD &>/dev/null
