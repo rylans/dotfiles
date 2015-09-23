@@ -26,6 +26,7 @@ alias gti='git'
 alias gt='git'
 alias gi='git'
 alias it='git'
+alias gut='git'
 
 # vim typos
 alias vmi='vim'
@@ -41,7 +42,6 @@ alias sl='ls'
 # shortcuts
 alias la='ls -la'
 alias duh='du -s -h'
-alias dh='duh'
 alias d='duh'
 alias t='top -o cpu'
 
@@ -52,6 +52,7 @@ alias evim='vim ~/.vimrc; cp ~/.vimrc $DF'
 # Shortcuts for editing dropbox files
 alias todo='vim $DB/todolist.txt'
 alias note='vim $DB/notes.txt'
+alias scratch='vim $DB/scratch.txt'
 
 # Backup Github to Dropbox
 alias box_gh='cp -r $GH $DB; chmod -R 777 $DB'
