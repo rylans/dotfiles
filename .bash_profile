@@ -3,6 +3,7 @@
 export EDITOR='vim'
 export PAGER="less"
 
+
 # history
 export HISTCONTROL=ignoredups
 export HISTIGNORE="ls:ls *:cd:cd *:pwd"
@@ -53,6 +54,7 @@ alias evim='vim ~/.vimrc; cp ~/.vimrc $DF'
 alias todo='vim $DB/todolist.txt'
 alias note='vim $DB/notes.txt'
 alias scratch='vim $DB/scratch.txt'
+alias builds='vim $DB/builds.md'
 
 # Backup Github to Dropbox
 alias box_gh='cp -r $GH $DB; chmod -R 777 $DB'
