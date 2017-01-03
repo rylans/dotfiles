@@ -53,6 +53,8 @@ alias evim='vim ~/.vimrc; cp ~/.vimrc $DF'
 # Shortcuts for editing dropbox files
 alias todo='vim $DB/todolist.txt'
 alias note='vim $DB/notes.txt'
+alias journal='vim $DB/log.txt'
+alias tasks='vim $DB/tasks.txt'
 alias scratch='vim $DB/scratch.txt'
 alias builds='vim $DB/builds.md'
 
@@ -72,6 +74,9 @@ alias ghpage='git checkout gh-pages; git rebase master; git pull; git push; git 
 
 # Start interactive rebase of last two commits
 alias squash='git rebase -i HEAD~2'
+
+# Deal with git problems fast & destructively
+alias fixgit='git clean -dfx; git reset --hard HEAD'
 
 function is_git_dirty {
   git diff --quiet HEAD &>/dev/null
