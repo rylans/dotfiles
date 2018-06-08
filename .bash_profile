@@ -57,6 +57,7 @@ alias journal='vim $DB/log.txt'
 alias tasks='vim $DB/tasks.txt'
 alias scratch='vim $DB/scratch.txt'
 alias builds='vim $DB/builds.md'
+alias work='vim $DB/wrk/work_meta.txt'
 
 # Backup Github to Dropbox
 alias box_gh='cp -r $GH $DB; chmod -R 777 $DB'
@@ -89,6 +90,9 @@ function is_git_dirty {
     echo "👌 "
   fi
 }
+
+function enc { openssl enc -aes-256-cbc -salt -in "$1" -out out.aes ;}
+function dec { openssl enc -d -aes-256-cbc -in "$1" -out out ;}
 
 # Bash prompt
 export PS1="\e[0;36m\u:\e[m\e[0;32m\w\e[m\$(is_git_dirty)"
